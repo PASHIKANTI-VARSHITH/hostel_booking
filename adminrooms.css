@@ -1,0 +1,535 @@
+/* css file for studentrooms.php and adminrooms.php*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.rooms{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgb(243, 242, 242);
+    border-top: 1px solid #d6d6d6;
+    box-shadow: 0 0 14px rgba(0,0,0,1.5);
+}
+.roomsnavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-bottom: 1px solid #d6d6d6;
+    box-shadow: 0 0 4px rgba(0,0,0,.1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+
+    /* ------------- */
+    
+}
+.roomslogo img {
+    width: 170px;
+    height: auto;
+}
+
+.roomscontainer {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-bottom: 60px;
+}
+.room {
+    border: 1px solid rgb(173, 171, 171);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(0,0,0,.5);
+    font-size: 0px;
+}
+.room h1 {
+    background-color: #007bff;
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #0056b3;
+}
+.room h1 i{
+    margin-left: 12px;
+}
+.room h1 i:hover{
+    transform: scale(1.1);
+}
+.room h1 i{
+    color: white;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding:8px 25px;
+    margin: 0;
+    list-style: none;
+}
+.bed {
+    background-color: green;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+.selected{
+    background-color: #60c7c1;
+}
+
+.bed:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.addroom{
+    align-items: center;
+}
+.addroom a{
+    background-color: #007bff;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius:5px;
+    border:1px solid #0056b3;
+    box-shadow: 0 0 4px rgba(0,0,0,.8);
+}
+.addroom a:hover{
+    color: white;
+    text-decoration: none;
+    background-color: #0b71dd;
+}
+@media only screen and (min-width: 0px) and (max-width: 600px){
+    .roomslogo img {
+    width: 120px;
+    height: auto;
+  }
+  .addroom a{
+    padding: 3px;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius:5px;
+}
+}
+
+/* add rooms -------------------------------------------- */
+.modal-login {
+    width: 320px;
+    margin: 30px auto;
+}
+.modal-login .modal-content {
+    border-radius: 1px;
+    border: none;
+}
+.modal-login .modal-header {
+    position: relative;
+    justify-content: center;
+    background: #f2f2f2;
+}
+.modal-login .modal-body {
+    padding: 30px;
+}
+.modal-login .modal-footer {
+    background: #f2f2f2;
+}
+.modal-login h4 {
+    text-align: center;
+    font-size: 26px;
+}
+.modal-login label {
+    font-weight: normal;
+    font-size: 13px;
+}
+.modal-login .form-control, .modal-login .btn {
+    min-height: 38px;
+    border-radius: 2px; 
+}
+.modal-login .hint-text {
+    text-align: center;
+}
+.modal-login .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.modal-login .checkbox-inline {
+    margin-top: 12px;
+}
+.modal-login input[type="checkbox"]{
+    margin-top: 2px;
+}
+.modal-login .btn {
+    min-width: 100px;
+    background: #3498db;
+    border: none;
+    line-height: normal;
+}
+.modal-login .btn:hover, .modal-login .btn:focus {
+    background: #248bd0;
+}
+.modal-login .hint-text a {
+    color: #999;
+}
+
+/* --------------------------delete----------------------------- */
+.modal-confirm {		
+    color: #636363;
+    width: 400px;
+    margin: 30px auto;
+}
+.modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+.modal-confirm .modal-header {
+    border-bottom: none;   
+    position: relative;
+}
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -10px;
+}
+.modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+}
+.modal-confirm .modal-body {
+    color: #999;
+}
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;		
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+}
+.modal-confirm .modal-footer a {
+    color: #999;
+}		
+.modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    text-align: center;
+    border: 3px solid #f15e5e;
+}
+.modal-confirm .icon-box i {
+    color: #f15e5e;
+    font-size: 46px;
+    display: inline-block;
+    margin-top: 13px;
+}
+.modal-confirm .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #60c7c1;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    border-radius: 3px;
+    margin: 0 5px;
+    outline: none !important;
+}
+.modal-confirm .btn-info {
+    background: #c1c1c1;
+}
+.modal-confirm .btn-info:hover, .modal-confirm .btn-info:focus {
+    background: #a8a8a8;
+}
+.modal-confirm .btn-danger {
+    background: #f15e5e;
+}
+.modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+    background: #ee3535;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    background-color: rgb(243, 242, 242);
+    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #d6d6d6;
+    box-shadow: 0 0 14px rgba(0,0,0,1.5);
+}
+.showcase{
+    display: flex;
+    justify-content: center;
+}
+.footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+}
+.showcase li small{
+    margin-left: 10px;
+    font-size: 15px;
+}
+.na{
+    background-color: green;
+}
+.b{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color:green;
+}
+.sel{
+    background-color: #60c7c1;
+}
+.bk{
+    background-color:red;
+}
+.modal-footer{
+    gap: 1rem;
+}
+/* CSS for the book button when enabled */
+.bookbtn button{
+    color: white;
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.bookbtn button:hover{
+    background-color: rgb(212, 4, 4) ;
+}
+.beforebtn button {
+    background-color: rgb(236, 114, 114);
+    cursor: not-allowed;
+}
+
+.feenotpaid{
+    display: none;
+    padding: 0;
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    color: red;
+    padding-right: 20px;
+}
+.feenotpaid p{
+    padding: 0;
+    margin: 0;
+}
+.feepaidandbooked{
+    padding: 0;
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    color:red;
+    padding-right: 20px;
+}
+.feepaidandbooked p{
+    color:red;
+    padding: 0;
+    margin: 0;
+}
+.rules {
+    border: 2px rgb(160, 156, 156) solid;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 0;
+    margin: 0px;
+    border-radius:10 ;
+    box-shadow: 8px 8px 8px gray;
+    background-color: #fff;
+    
+}
+.rulescontainer{
+    margin: 70px;
+    display: none;
+}
+.randr{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+.randr h1{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.randr h1 a{
+    text-decoration: none;
+    color: black;
+}
+.continue{
+    margin-top: 0;
+    background-color: rgb(105, 141, 220);
+    margin-left: 20px;
+    border: 2px black solid;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+.closebtn{
+    border: none;
+    background-color:  #fff;
+}
+.detailsc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}.detailsc h1{
+    font-weight: bolder;
+}
+.detailscon{
+    margin: 70px;
+    display: none;
+}
+.det{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.dconfirm{
+    margin-top: 0;
+    background-color: rgb(105, 141, 220);
+    margin-left: 20px;
+    border: 2px black solid;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+.dconfirm:hover{
+    background-color:  rgb(78, 124, 222);
+}
+.successcon{
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.success{
+    gap: 2rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.successinfo{
+    text-align: center;
+    font-size: medium;
+    line-height: 8px;
+}
+
+.congrats{
+    line-height: 0%;
+    /* margin-bottom: 10px; */
+}
+.sok{
+    background-color: rgb(30, 211, 30);
+    color: #fff;
+    border-radius: 4px;
+    background: #82ce34;
+    text-decoration: none;
+    transition: all 0.4s;
+    border: none;    
+    padding: 7px 80px;
+}
+
+.upisection{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.upicontainer{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.upicon{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.upicon img{
+    width: 350px;
+}
+.upicon button{
+    width: 300px;
+    background-color: rgb(3, 140, 3);
+    padding: 8px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.upicon button:hover{
+    background-color: green;
+}
+@media (max-width: 420px) {
+    .upicon img{
+        width: 350px;
+    }
+    .upicon button{
+        width: 300px;
+    }
+}
+.upiback{
+    width: 100%;
+    display: flex;
+    justify-content:flex-start;
+    font-size: 2rem;
+}
+.upiback i{
+    font-size: 2rem;
+}
